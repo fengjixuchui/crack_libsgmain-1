@@ -51,13 +51,13 @@ int decrypto(struct dcryptdata* decryptdata_, int* a2) {
       result = ((int (__fastcall *)(void *))call_aes)(decryptdata_->v);
       break;
     case 3u:
-      result = ((int (__fastcall *)(struct vdata *, struct vdata *))unk_A409DEEC)(decryptdata_->key, decryptdata_->cryptedata);
+      result = ((int (__fastcall *)(struct vdata *, struct vdata *))call_rc4)(decryptdata_->key, decryptdata_->cryptedata);
       break;
     case 0x14u:
       result = ((int (__fastcall *)(void *, struct vdata *))call_uncompress)(decryptdata_->v, decryptdata_->cryptedata);
       break;
     case 0x15u:
-      result = ((int (__fastcall *)(void *, struct vdata *, _DWORD *))unk_A409A998)(decryptdata_->v, decryptdata_->cryptedata, 820000);
+      result = ((int (__fastcall *)(void *, struct vdata *, _DWORD *))call_base64)(decryptdata_->v, decryptdata_->cryptedata, 820000);
       break;
     case 0x16u:
       result = ((int (__fastcall *)(struct vdata *))call_md5)(decryptdata_->cryptedata);
